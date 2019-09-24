@@ -1,12 +1,16 @@
 
 document.getElementById("button-addon1").addEventListener("click", getMyData);
+document.getElementById("information").style.display = "none";
 
-var cityName = " "
+//var cityName = " "
 
 
 
 function getMyData() {
   console.log("button pressed, here is the data");
+  
+  document.getElementById("information").style.display = "block";
+  
   //set const to URL API
 
   const URL = "http://api.openweathermap.org/data/2.5/weather?q=";
@@ -19,16 +23,24 @@ function getMyData() {
 
   fetch(URL + zipCode + apiKey) //pull from dynamic URL
     .then(function (x) {                        //pull response and convert to json
-
-      console.log(zipCode);
-      return x.json();                          //return response
+        if(x.status == 404){
+          console.log(x.status);
+          var error = "That's not a zip code, try again";
+          var blank = "";
+          document.getElementById("cityName").innerHTML = error;
+          document.getElementById("information").style.display = "block";
+        }
+        else{
+          
+      console.log(x.status);
+      return x.json(); }                         //return response
     })
     .then(function (jsonData) {                        //console log returned data
       console.log(JSON.stringify(jsonData));
       cityName = jsonData.name;
-      cityTempK = (jsonData.main.temp).toFixed(1) + " °K";
+      cityTempK = (jsonData.main.temp).toFixed(1) + "°K";
       cityTempC = (jsonData.main.temp - 273.15).toFixed(1) + "°C";
-      cityTempF = ((jsonData.main.temp - 273.15) * 9 / 5 + 32).toFixed(1) + " °F";
+      cityTempF = ((jsonData.main.temp - 273.15) * 9 / 5 + 32).toFixed(1) + "°F";
       cityCond = jsonData["weather"]["0"]["description"];
       cityIcon = "<img src = 'http://openweathermap.org/img/w/" + jsonData["weather"]["0"]["icon"] + ".png'>";
       console.log(cityCond);
