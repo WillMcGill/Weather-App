@@ -4,7 +4,14 @@ document.getElementById("information").style.display = "none";
 
 //var cityName = " "
 
+document.getElementById("currentButton").addEventListener("click", getCurrentPosition);
 
+
+var dummy = getCurrentPosition();
+// function getCurrentLoc(){
+//   var lat = position.coordinates.latitude;
+//   console.log (lat);
+// }
 
 function getMyData() {
   console.log("button pressed, here is the data");
@@ -58,7 +65,7 @@ function returnData() {
   document.getElementById("fahr").innerHTML = cityTempF;
   document.getElementById("celc").innerHTML = cityTempC;
   document.getElementById("kelv").innerHTML = cityTempK;
-  console.log(cityIcon);
+  //console.log(cityIcon);
 };
 
 
