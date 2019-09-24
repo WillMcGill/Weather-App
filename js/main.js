@@ -3,12 +3,7 @@ document.getElementById("button-addon1").addEventListener("click", getMyData);
 
 var cityName = " "
 
-function returnData(){
-   document.getElementById("cityName").innerHTML = cityName;
-   document.getElementById("cityTemp").innerHTML = cityTempF;
-   console.log("return Data function");
-   console.log(cityName);
-}
+
 
 function getMyData() {
   console.log("button pressed, here is the data");
@@ -33,15 +28,24 @@ function getMyData() {
       cityName = jsonData.name;
       cityTempK = (jsonData.main.temp).toFixed(1) + " °K";
       cityTempC = (jsonData.main.temp - 273.15).toFixed(1) + "°C";
-      cityTempF = ((jsonData.main.temp - 273.15) * 9/5 + 32).toFixed(1) + " °F";
-      console.log(cityTemp);
+      cityTempF = ((jsonData.main.temp - 273.15) * 9 / 5 + 32).toFixed(1) + " °F";
+      cityCond = jsonData["weather"]["0"]["description"];
+      cityIcon = "<img src = 'http://openweathermap.org/img/w/" + jsonData["weather"]["0"]["icon"] + ".png'>";
+      console.log(cityCond);
 
       returnData();
     })
-    
-    //document.getElementById("cityName").innerHTML = cityName;
-    }
-    ;
+
+  //document.getElementById("cityName").innerHTML = cityName;
+}
+
+function returnData() {
+  document.getElementById("cityName").innerHTML = cityName;
+  document.getElementById("cityTemp").innerHTML = cityTempF;
+  document.getElementById("cityCond").innerHTML = cityCond;
+  document.getElementById("cityIcon").innerHTML = cityIcon;
+  console.log(cityIcon);
+};
 
 
 
