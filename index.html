@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
   <body>
+    <div class="container-fluid">
+      
+    
     <!-- Submission Form -->
     <h1>Weather App </h1>
     <div class="input-group mb-3">
@@ -34,7 +37,12 @@
       <div class="card-header">Temperature</div>
       <div class="card-body">
         <h5 class="card-title" id = "cityTemp"></h5>
-        <p class="card-text">.</p>
+        <div class = "row">
+        <p class="border col-4" id = "fahr"></p>
+        <p class="border col-4" id = "celc"></p>
+        <p class="border col-4" id = "kelv"></p>
+       
+      </div>
       </div>
     </div>
 
@@ -47,7 +55,7 @@
       <p class="card-text" id = "cityIcon"></p>
     </div>
   </div>
-    
+</div>
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

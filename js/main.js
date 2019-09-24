@@ -41,9 +41,11 @@ function getMyData() {
 
 function returnData() {
   document.getElementById("cityName").innerHTML = cityName;
-  document.getElementById("cityTemp").innerHTML = cityTempF;
   document.getElementById("cityCond").innerHTML = cityCond;
   document.getElementById("cityIcon").innerHTML = cityIcon;
+  document.getElementById("fahr").innerHTML = cityTempF;
+  document.getElementById("celc").innerHTML = cityTempC;
+  document.getElementById("kelv").innerHTML = cityTempK;
   console.log(cityIcon);
 };
 
