@@ -15,19 +15,21 @@
       
     
     <!-- Submission Form -->
-    <div class = "mx-auto">
-    <h1>Weather App </h1>
+    <div class = "mx-auto text-center" style="max-width: 50vw;">
+    <h3>Weather App </h3>
     <div class="input-group mb-3 mx-auto">
       <div class="input-group-prepend">
         <button class="btn btn-outline-secondary" type="button" id="button-addon1">Submit</button>
       </div>
-      <input type="text" class="form-control" placeholder="Enter A U.S. Zip Code" id = "zipForm" aria-label="Example text with button addon" aria-describedby="button-addon1">
+      <input type="text" class="form-control" placeholder="Zip Code" id = "zipForm" aria-label="Example text with button addon" aria-describedby="button-addon1">
     </div>
   </div>
+
+
     
-    <div id = "information">
+    <div class ="text-center" id = "information">
     <!-- Display City -->
-    <div class="card bg-light mb-3 mx-auto" style="max-width: 18rem;">
+    <div class="card bg-white mb-3 mx-auto" style="max-width: 80vw;">
       <div class="card-header">City</div>
       <div class="card-body">
         <h5 class="card-title" id = "cityName"></h5>
@@ -36,7 +38,7 @@
     
     <!-- Display Temp -->
     
-    <div class="card bg-light mb-3" style="max-width: 18rem;">
+    <div class="card bg-light mb-3" style="max-width: 100vw;">
       <div class="card-header">Temperature</div>
       <div class="card-body" id = "temperature">
         <!-- <h5 class="card-title" id = "cityTemp"></h5> -->
@@ -51,7 +53,7 @@
 
     <!-- Display Condition -->
   
-  <div class="card bg-light mb-3" id = "condition" style="max-width: 18rem">
+  <div class="card bg-light mb-3" id = "condition" style="max-width: 100vw;">
     <div class="card-header"><div class = "mx-auto">Condition</div></div>
     <div class="card-body">
       <h5 class="card-title" id = "cityCond"></h5>
