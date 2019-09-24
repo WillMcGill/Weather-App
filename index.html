@@ -8,39 +8,42 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
   <body>
-    <div class="container-fluid">
+    <div class="container-flex align-content-center">
       
     
     <!-- Submission Form -->
+    <div class = "mx-auto">
     <h1>Weather App </h1>
-    <div class="input-group mb-3">
+    <div class="input-group mb-3 mx-auto">
       <div class="input-group-prepend">
         <button class="btn btn-outline-secondary" type="button" id="button-addon1">Submit</button>
       </div>
       <input type="text" class="form-control" placeholder="Enter A U.S. Zip Code" id = "zipForm" aria-label="Example text with button addon" aria-describedby="button-addon1">
     </div>
+  </div>
     
+    <div id = "information">
     <!-- Display City -->
-    <div class="card bg-light mb-3" style="max-width: 18rem;">
+    <div class="card bg-light mb-3 mx-auto" style="max-width: 18rem;">
       <div class="card-header">City</div>
       <div class="card-body">
         <h5 class="card-title" id = "cityName"></h5>
-        <p class="card-text" id = "cityName"></p>
+        <!-- <p class="card-text" id = "cityName"></p> -->
       </div>
     
     <!-- Display Temp -->
     
     <div class="card bg-light mb-3" style="max-width: 18rem;">
       <div class="card-header">Temperature</div>
-      <div class="card-body">
-        <h5 class="card-title" id = "cityTemp"></h5>
+      <div class="card-body" id = "temperature">
+        <!-- <h5 class="card-title" id = "cityTemp"></h5> -->
         <div class = "row">
-        <p class="border col-4" id = "fahr"></p>
-        <p class="border col-4" id = "celc"></p>
-        <p class="border col-4" id = "kelv"></p>
+        <p class="col-4" id = "fahr"></p>
+        <p class="col-4" id = "celc"></p>
+        <p class="col-4" id = "kelv"></p>
        
       </div>
       </div>
@@ -48,13 +51,14 @@
 
     <!-- Display Condition -->
   
-  <div class="card bg-light mb-3" style="max-width: 18rem;">
-    <div class="card-header">Condition</div>
+  <div class="card bg-light mb-3" id = "condition" style="max-width: 18rem">
+    <div class="card-header"><div class = "mx-auto">Condition</div></div>
     <div class="card-body">
       <h5 class="card-title" id = "cityCond"></h5>
       <p class="card-text" id = "cityIcon"></p>
     </div>
   </div>
+</div>
 </div>
       
     <!-- Optional JavaScript -->
