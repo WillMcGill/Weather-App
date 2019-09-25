@@ -7,7 +7,7 @@ document.getElementById("information").style.display = "none";
 document.getElementById("currentButton").addEventListener("click", getCurrentPosition);
 
 
-var dummy = getCurrentPosition();
+//var dummy = getCurrentPosition();
 // function getCurrentLoc(){
 //   var lat = position.coordinates.latitude;
 //   console.log (lat);
@@ -32,12 +32,15 @@ function getMyData() {
     .then(function (x) {                        //pull response and convert to json
         if(x.status == 404){
           console.log(x.status);
-          var error = "That's not a zip code, try again";
-          var blank = "";
-          document.getElementById("cityName").innerHTML = error;
-          document.getElementById("information").style.display = "block";
+          alert('Not a valid zip code');
+          document.getElementById("button-addon1").addEventListener("click", getMyData);
+          document.getElementById("information").style.display = "none";
+          // var error = "That's not a zip code, try again";
+          // var blank = "";
+          // document.getElementById("cityName").innerHTML = error;
+          // document.getElementById("information").style.display = "block";
         }
-        else{
+          else{
           
       console.log(x.status);
       return x.json(); }                         //return response
