@@ -20,7 +20,7 @@ function getMyData() {
   
   //set const to URL API
 
-  const URL = "http://api.openweathermap.org/data/2.5/weather?q=";
+  const URL = "https://api.openweathermap.org/data/2.5/weather?q=";
   const apiKey = ",us&APPID=b767ab5374552a0f308785e30d6322ab";
 
   //set zipcode
