@@ -25,20 +25,18 @@ function getMyData() {
 
   //set zipcode
 
-  var zipCode = document.getElementById("zipForm").value;
+  var zipCode = (document.getElementById("zipForm").value).slice(0,6);
+  var zipCodeEdit = zipCode.slice(0,5);
   console.log(zipCode);
 
-  fetch(URL + zipCode + apiKey) //pull from dynamic URL
+  fetch(URL + zipCodeEdit + apiKey) //pull from dynamic URL
     .then(function (x) {                        //pull response and convert to json
         if(x.status == 404){
           console.log(x.status);
           alert('Not a valid zip code');
           document.getElementById("button-addon1").addEventListener("click", getMyData);
           document.getElementById("information").style.display = "none";
-          // var error = "That's not a zip code, try again";
-          // var blank = "";
-          // document.getElementById("cityName").innerHTML = error;
-          // document.getElementById("information").style.display = "block";
+          
         }
           else{
           
