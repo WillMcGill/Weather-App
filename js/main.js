@@ -4,7 +4,7 @@ document.getElementById("information").style.display = "none";
 
 //var cityName = " "
 
-document.getElementById("currentButton").addEventListener("click", getCurrentPosition);
+
 
 
 //var dummy = getCurrentPosition();
